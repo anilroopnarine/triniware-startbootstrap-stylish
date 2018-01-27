@@ -1,4 +1,5 @@
-<!DOCTYPE html> <html lang="en">
+<!DOCTYPE html> 
+<html lang="en">
 
   <head>
 
@@ -20,6 +21,8 @@
 
     <!-- Custom CSS -->
     <link href="css/stylish-portfolio.css" rel="stylesheet">
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
 
   </head>
 
@@ -63,8 +66,6 @@
       <div class="overlay"></div>
     </header>
 
-    <!-- logo -->
-    <a href="#" style="position: fixed; top: 0"><img src="img/triniware.gif"><img src="img/ttflaganim.gif" height="50px"></a>
 
     <!-- About -->
     <section class="content-section bg-light" id="about">
@@ -206,13 +207,49 @@
     -->
     <!-- Contact -->
     <section class="content-section bg-primary" id="contact">
-      <div class="container text-center">
+      <div class="container textcenter">
         <div class="row">
           <div class="col-lg-10 mx-auto">
-            <h2>Contact.
-            <p class="lead mb-5"> You think it up, We design, build, launch, maintain and support it!
-            </p>
-            <a class="btn btn-dark btn-xl js-scroll-trigger" href="#">What We Offer</a>
+		<div class="well well-sm">
+		    <h2>Contact us</h2>
+		    <p> &nbsp </p>
+		  <form class="form-horizontal" id="contact-form" action="contact.php" method="post">
+		  <fieldset>
+	    
+		    <!-- Name input-->
+		    <div class="form-group">
+		      <div class="col-md-9">
+			<input id="name" name="name" type="text" placeholder="Your name" class="form-control">
+		      </div>
+		    </div>
+	    
+		    <!-- Email input-->
+		    <div class="form-group">
+		      <div class="col-md-9">
+			<input id="email" name="email" type="text" placeholder="Your email" class="form-control">
+		      </div>
+		    </div>
+	    
+		    <!-- Message body -->
+		    <div class="form-group">
+		      <div class="col-md-9">
+			<textarea class="form-control" id="message" name="message" placeholder="Please enter your message here..." rows="5"></textarea>
+		      </div>
+		    </div>
+		    <div class="form-group">
+			<div class="col-md-9 g-recaptcha" data-sitekey="6LfXwUIUAAAAAD5HmwrE3fBV2dmK2Dt1ySXHVoDy"></div>
+		    </div>
+	<!-- Form actions -->
+		    <div class="form-group">
+		      <div class="col-md-12 text-left">
+			      <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+		      </div>
+		    </div>
+		  </fieldset>
+		  </form>
+		</div>
+
+            </div>
           </div>
         </div>
       </div>
@@ -242,9 +279,12 @@
         </ul>
 	      -->
 
-        <p class="text-muted small mb-0">Copyright &copy; Triniware LTD. 2017</p>
+        <p class="text-muted small mb-0">Copyright &copy; Triniware LTD. 2018</p>
       </div>
     </footer>
+    
+    <!-- logo -->
+    <a href="#" style="position: fixed; top: 0"><img src="img/triniware.gif"><img src="img/ttflaganim.gif" height="50px"></a>
 
     <!-- Scroll to Top Button-->
     <a class="scroll-to-top rounded js-scroll-trigger" href="#page-top">
