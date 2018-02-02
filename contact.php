@@ -1,4 +1,4 @@
-<?php require "" ?>
+<?php require "home.php" ?>
 <?php 
 	$params = array();
 	$response = "";
