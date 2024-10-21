@@ -1,4 +1,4 @@
-<?php require "home.php" ?>
+<?php require "/home/www/lib/triniware/php/Home.php" ?>
 <?php 
 	$params = array();
 	$response = "";
@@ -27,7 +27,9 @@
 	$captcha_success=json_decode($verify);
 
 	if($captcha_success->success==true && $params['name'] && $params['email']){
-		#myTables::doEmail('triniware@gmail.com', 'Triniware', $subject, $body);
+        #myTables::doEmail('triniware@gmail.com', 'Triniware', $subject, $body);
+        $body = filter_var($body, FILTER_SANITIZE_EMAIL);
+		# mail('triniware@gmail.com', $subject, $body);   no sendmail
 	} else {
 		$err = " No Name or Email Received or Captcha Failed. Please Try Again. ";
 	}
